@@ -5,7 +5,9 @@ import Card from "../UI/Card";
 function Expense(props) {
   return (
     <Card className="expenses">
-      {props.expenseItems.map(item => (<ExpenseItem expense={item} />))}
+      <ExpenseItem expense={props.expenseItems[0]} />
+      <ExpenseItem expense={props.expenseItems[1]} />
+      <ExpenseItem expense={props.expenseItems[2]} />
     </Card>
   );
 }
