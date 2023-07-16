@@ -12,9 +12,7 @@ function Expense(props) {
   return (
     <Card className="expenses">
       <ExpensesFilter selectValue={filteredYear} onFilterChange={onFilterChangeHandler} />
-      <ExpenseItem expense={props.expenseItems[0]} />
-      <ExpenseItem expense={props.expenseItems[1]} />
-      <ExpenseItem expense={props.expenseItems[2]} />
+      {props.expenseItems.map(item => (<ExpenseItem expense={item} />))}
     </Card>
   );
 }
